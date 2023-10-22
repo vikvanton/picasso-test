@@ -43,6 +43,12 @@ function CompanyInput({
     onChange(e.target.value);
   };
 
+  const handleListClose = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Escape") {
+      setCompanies([]);
+    }
+  };
+
   const onCompanyFind = (name: string) => {
     onChange(name);
     setRequestValue("");
@@ -50,20 +56,12 @@ function CompanyInput({
     setIsFind(true);
   };
 
-  const handleListClose = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Escape") {
-      setCompanies([]);
-    }
+  const handleCompanyClick = (value: string) => {
+    onCompanyFind(value);
   };
 
-  const handleCompanyClick = (e: React.MouseEvent<HTMLParagraphElement>) => {
-    onCompanyFind((e.target as HTMLParagraphElement).textContent as string);
-  };
-
-  const handleCompanyEnter = (e: React.KeyboardEvent<HTMLParagraphElement>) => {
-    if (e.key === "Enter") {
-      onCompanyFind((e.target as HTMLParagraphElement).textContent as string);
-    }
+  const handleCompanyEnter = (value: string) => {
+    onCompanyFind(value);
   };
 
   return (

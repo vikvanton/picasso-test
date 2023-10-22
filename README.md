@@ -1,27 +1,27 @@
-# React + TypeScript + Vite
+# О проекте
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Компонент-инпут для ввода компании с автокомплитом Тестовое задания из Акселлератора Яндекс.Практикума.
 
-Currently, two official plugins are available:
+# Функциональность
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- В поле ввода пользователь может вводить как название компании, так и url сайта компании;
+- Компонент обращается к API https://dashboard.clearbit.com/docs#autocomplete-api за подсказками и показывает в автокомплите список возможных вариантов;
+- После выбора компании из автокомплита, ее название вставляется в значение поля.
 
-## Expanding the ESLint configuration
+# Стек
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Typescript, React, Vite
 
-- Configure the top-level `parserOptions` property like this:
+# Запуск
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+Для редактирования и запуска проекта необходимо установить Node.js (https://nodejs.org/) и
+редактор кода, например VSCode (https://code.visualstudio.com/):
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Клонируйте репозиторий или загрузите zip-файл;
+- Установите зависимости командой npm i;
+- Запустите проект командой npm run dev;
+- В браузере введите в адресной строке http://localhost:5173/
+
+# Ссылка
+
+https://picasso-test-vikvanton.vercel.app/
